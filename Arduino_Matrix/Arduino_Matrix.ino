@@ -1,7 +1,7 @@
 /****************arduino板载点阵板******************
  * by 未见
- * 2018/05/18
- * 测试 Ver 0.1.0
+ * 2018/05/19
+ * 测试 Ver 0.1.1
  * 
  * -------------------PIN Map---------------------
  * COL            	C1   C2  C3  C4  C5	C6	C7	C8
@@ -43,7 +43,6 @@ void setup(void)
 	{
 		pinMode(i, OUTPUT);
 	}
-	Serial.begin(9600);
 }
 
 
@@ -85,8 +84,6 @@ void Display(uint8_t MAP[][8],unsigned long Set_Time = 1000)
 			delay(2); //这里延时一下效果会好点,不然可能会出现亮度不一致;
 		}
 	} while (millis() - Old_Time < Set_Time);
-	Serial.print("Time:");
-	// Serial.println(Set_Time);
 	Old_Time = millis();
 	Clear_Screen();
 }
