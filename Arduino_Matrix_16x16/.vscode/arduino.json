@@ -1,0 +1,6 @@
+{
+    "board": "arduino:avr:pro",
+    "configuration": "cpu=16MHzatmega328",
+    "port": "com6",
+    "sketch": "Arduino_Matrix_16x16.ino"
+}
